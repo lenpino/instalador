@@ -1,0 +1,68 @@
+
+<installation version="1.0"> 
+  <info>
+    <appname>iConserje</appname>
+    <appversion>0.2.1</appversion>
+    <authors>  
+     <author name="Leonardo Pino Werlinger"  email="lenpino@gmail.com"  />  
+    </authors> 
+    <javaversion>1.6</javaversion>
+    <run-privileged condition="izpack.windowsinstall.7|izpack.windowsinstall.vista"/>
+  </info>
+  <resources>  
+  	<!-- Contenido que se mostrará en el panel InfoPanel (Ver imagen 3) -->  
+  	<res id="InfoPanel.info"   src="res/Readme.txt"/>  
+          
+	<!-- Los accesos directos están definidos en el fichero res/shortcutSpec.xml -->  
+	<res id="shortcutSpec.xml" src="res/shortcutSpec.xml"/>  
+   </resources>  
+ 
+  <locale>
+    <langpack iso3="spa"/>
+  </locale>
+ 
+  <guiprefs width="800" height="600" resizable="no">
+    <splash>images/peas_load.gif</splash>
+    <laf name="windows">
+      <os family="windows" />
+      <param name="variant" value="mist-silver" />
+    </laf>
+    <laf name="substance">
+      <os family="mac" />
+      <param name="variant" value="mist-aqua" />
+    </laf>
+    <modifier key="useHeadingPanel" value="yes" />
+  </guiprefs>
+  
+  <!-- Requerido para crear los accesos directos en sistemas Windows -->  
+  <native type="izpack" name="ShellLink.dll"/>   
+ 
+  <!-- Paneles que deseamos que sean mostrados. El orden importa excepto en el InstallPanel que siempre será el primero -->  
+  <panels>  
+      <!-- Muestra un saludo genérico al usuario que ejecuta la instalación (Ver imagen 2)  -->  
+      <panel classname="HelloPanel"/>                     
+      <!-- Muestra los datos informativos definidos en el elemento info que escribimos arriba (Ver imagen 2)  -->  
+      <panel classname="InfoPanel"/>                     
+      <!-- Pregunta al usuario en que directorio se instalarán los archivos de la aplicación (Ver imagen 4)  -->  
+      <panel classname="TargetPanel"/>            
+      <!-- Pregunta al usuario que paquetes desea instalar  (Ver imagen 5) -->  
+      <panel classname="PacksPanel"/>            
+      <!-- Este es un panel de control que siempre debe estar especificado -->  
+      <panel classname="InstallPanel"/>            
+      <!-- Pregunta al usuario que accesos directos desea crear  (Ver imagen 7)  -->  
+      <panel classname="ShortcutPanel"/>                           
+      <!-- Muestra un mensaje informativo indicando que la instalación a finalizado  (Ver imagen 8)    -->  
+      <panel classname="SimpleFinishPanel"/>  
+  </panels>  
+ 
+  <packs>
+    <pack name="iConserje" required="yes">
+      <description>The core files needed for the application</description>
+      <fileset dir="/Users/Len/desarrollo/tests" src="admacc.jar" targetdir="${INSTALL_PATH}" override="true"/>
+      <file src="res/building.ico"     targetdir="$INSTALL_PATH"/>
+      <file src="res/log.properties"     targetdir="$INSTALL_PATH"/>
+      <file src="res/iConserje.bat"     targetdir="$INSTALL_PATH"/>
+    </pack>
+  </packs>
+ 
+</installation>

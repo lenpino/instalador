@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Accesos">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/Users/Len/desarrollo/tests/admacc.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="cl.miempresa.accesos.principal.Main"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="/Users/Len/Documents/tmp/archivos/workspace/Accesos/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.equinox.common_3.6.100.v20120522-1841.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.equinox.registry_3.5.200.v20120522-1841.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.core.runtime_3.8.0.v20120521-2346.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.text_3.5.200.v20120523-1310.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/com.ibm.icu_4.4.2.v20110823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/Documents/tmp/archivos/workspace/Accesos/swing2swt.jar"/>
+            <fileset dir="/Users/Len/Documents/tmp/archivos/workspace/accesodb/build/classes"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_cs.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_de_DE.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_es.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_fr.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_hu.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_it.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_ja_JP.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_ko_KR.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_pl.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_pt_BR.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_ru.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_zh_CN.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derbyLocale_zh_TW.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/base de datos/db-derby-10.9.1.0-bin/lib/derby.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/JavaLibs/eclipselink/jlib/eclipselink.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/JavaLibs/eclipselink/jlib/jpa/javax.persistence_2.0.4.v201112161009.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/JavaLibs/eclipselink/jlib/jpa/eclipselink-jpa-modelgen_2.4.1.v20121003-ad44345.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.core.databinding_1.4.1.v20120521-2329.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.core.databinding.beans_1.2.200.v20120523-1955.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.core.databinding.observable_1.4.1.v20120521-2329.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.core.databinding.property_1.4.100.v20120523-1955.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.jface.databinding_1.6.0.v20120521-2329.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.core.commands_3.6.1.v20120814-150512.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.jface_3.8.101.v20120817-083647.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.jface.text_3.8.1.v20120828-155502.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.osgi_3.8.1.v20120830-144521.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.swt.cocoa.macosx.x86_64_3.100.1.v4234e.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.ui.forms_3.5.200.v20120705-114351.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Applications/eclipse/plugins/org.eclipse.ui.workbench_3.103.1.v20120906-120042.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/JavaLibs/commons-codec-1.3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/JavaLibs/purejavacomm-0.0.16.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/JavaLibs/jna-3.5.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/Len/desarrollo/JavaLibs/commons-validator-1.4.0/commons-validator-1.4.0.jar"/>
+        </jar>
+    </target>
+</project>
