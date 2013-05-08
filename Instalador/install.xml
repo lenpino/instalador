@@ -2,7 +2,7 @@
 <installation version="1.0"> 
   <info>
     <appname>iConserje</appname>
-    <appversion>0.2.1</appversion>
+    <appversion>0.2.5</appversion>
     <authors>  
      <author name="Leonardo Pino Werlinger"  email="lenpino@gmail.com"  />  
     </authors> 
@@ -15,8 +15,11 @@
           
 	<!-- Los accesos directos están definidos en el fichero res/shortcutSpec.xml -->  
 	<res id="shortcutSpec.xml" src="res/shortcutSpec.xml"/>  
-   </resources>  
- 
+   </resources>
+  <variables>
+	  <variable name="TargetPanel.dir.windows" value="C:/iConserje"/>
+	  <variable name="TargetPanel.dir.unix" value="/usr/local/iConserje"/>
+  </variables>
   <locale>
     <langpack iso3="spa"/>
   </locale>
@@ -61,6 +64,7 @@
       <fileset dir="/Users/Len/desarrollo/tests" src="admacc.jar" targetdir="${INSTALL_PATH}" override="true"/>
       <file src="res/building.ico"     targetdir="$INSTALL_PATH"/>
       <file src="res/log.properties"     targetdir="$INSTALL_PATH"/>
+      <file src="res/init.properties"     targetdir="$INSTALL_PATH"/>
       <file src="res/iConserje.bat"     targetdir="$INSTALL_PATH"/>
     </pack>
   </packs>
